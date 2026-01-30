@@ -69,7 +69,7 @@ for url in urls:
     ).text
     name = c.split('"og:title" content="')[1].split(" - #")[0].replace("&#039;", "'")
     book_id = c.split(" - #")[1].split(" -")[0]
-    chapters = [m[0] for m in pat.findall(c)][2:]
+    chapters = [m[0] for m in pat.findall(c)]
 
     check = input(f"Will download: {name} ({book_id}). This manhwaread has {len(chapters)} chapters. Are you sure? [Y/n]")
     if check.lower() in ("n", "no", "please no!", "stop this", "wtf"):
