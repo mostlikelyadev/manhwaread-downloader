@@ -100,4 +100,3 @@ for url in urls:
                     if resp == 404:
                         print("Downloaded chapter", chapter)
                         break
-            time.sleep(0.5)
